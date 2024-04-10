@@ -136,3 +136,15 @@ export const planqToEth = (planqAddress: string) => {
   const data = PLANQ.decoder(planqAddress)
   return ETH.encoder(data)
 }
+
+export const ENTANGLE = bech32Chain('ENTANGLE', 'ent')
+
+export const ethToEnt = (ethAddress: string) => {
+  const data = ETH.decoder(ethAddress)
+  return ENTANGLE.encoder(data)
+}
+
+export const planqToEnt = (planqAddress: string) => {
+  const data = ENTANGLE.decoder(planqAddress)
+  return ETH.encoder(data)
+}
